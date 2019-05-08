@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const { PAGES_DIR } = require('./webpack.const')
-const { entry } = require('../config')
+const { entry } = require('../hkx.config')
 // const cwd = process.cwd()
 
 // 获取文件夹名称
