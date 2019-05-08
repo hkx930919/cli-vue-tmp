@@ -12,7 +12,9 @@ export default new VueRouter({
     {
       path: '/index',
       name: 'index',
-      title: '首页',
+      meta: {
+        title: '首页'
+      },
       component: Index
     }
   ],
