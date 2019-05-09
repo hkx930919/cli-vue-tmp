@@ -1,6 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-const { PAGES_DIR } = require('./webpack.const')
+const { PAGES_DIR } = require('./const')
 const { entry } = require('../hkx.config')
 // const cwd = process.cwd()
 

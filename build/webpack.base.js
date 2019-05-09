@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 // 压缩插件
@@ -9,13 +10,17 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const { getPages } = require('./webpack.util')
-const { PAGES_DIR, HTML_PATH } = require('./webpack.const')
+const { PAGES_DIR, HTML_PATH } = require('./const')
+const { H5 } = require('../hkx.config.js')
 // 多页面入口
 const entry = {}
 const plugins = [
   // 2.0版本默认清除dist文件夹的内容
   new CleanWebpackPlugin(),
-  new VueLoaderPlugin()
+  new VueLoaderPlugin(),
+  new webpack.DefinePlugin({
+    __H5__: H5
+  })
 ]
 
 // 添加htmlwebpack
@@ -48,16 +53,14 @@ getPages().forEach(dir => {
 if (process.argv.indexOf('-analy') !== -1) {
   plugins.push(new BundleAnalyzerPlugin())
 }
-console.log('##########')
-console.log(entry)
-console.log('##########')
+
 module.exports = {
   entry,
   output: {
     path: path.resolve(__dirname, '../dist')
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json']
+    extensions: ['.js', '.vue', '.json', '.less', '.css']
   },
   module: {
     rules: [

@@ -6,5 +6,7 @@ module.exports = {
    *   entry: 'example'
    *   entry: ['example1','example2']
    */
-  entry: 'example'
+  entry: 'example',
+  px2rem: {}, //是否将px转成rem 可以配置成对象来配置postcss-pxtorem,
+  H5: true //h5页面，引入rem
 }
