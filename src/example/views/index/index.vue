@@ -1,27 +1,15 @@
 <template>
   <div class="container">
-    <a
-      href="http://172.16.10.4:3018/WEB_GROUP/hlj-core/src/branch/master/README.md"
-      target="_blank"
-    >
-      {{ msg }}
-    </a>
-    <img src="//qnm.hunliji.com/o_1crog4tkt1pfs15bn3j51elh7839.png" alt="vue" />
+    模板文件
   </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      msg: '开发前请仔细阅读婚礼纪前端脚手架使用说明'
-    }
+    return {}
   },
-  methods: {
-    todo() {
-      console.log('111')
-    }
-  }
+  methods: {}
 }
 </script>
 <style scoped lang="less">

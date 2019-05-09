@@ -8,11 +8,14 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:vue/essential'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
+    import: true
   },
+
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    parser: 'babel-eslint'
   },
   plugins: ['vue'],
   rules: {
