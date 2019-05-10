@@ -7,6 +7,5 @@ module.exports = {
    *   entry: ['example1','example2']
    */
   entry: 'example',
-  px2rem: {}, //是否将px转成rem 可以配置成对象来配置postcss-pxtorem,
-  H5: true //h5页面，引入rem
+  px2rem: {} //是否将px转成rem 可以配置成对象来配置postcss-pxtorem, 1rem=37.5 按照 ios 或者 android 效果图写px
 }
