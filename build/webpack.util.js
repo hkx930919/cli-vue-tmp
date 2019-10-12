@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const chalk = require('chalk')
 const { PAGES_DIR } = require('./const')
 const { entry } = require('../hkx.config')
 // const cwd = process.cwd()
@@ -30,6 +31,21 @@ function getPages() {
   }
   return pages
 }
+
+const success = (data)=>{
+  console.log(chalk.green(data))
+}
+const error = (data)=>{
+  console.log(chalk.red(data))
+}
+const info = (data)=>{
+  console.log(chalk.yellow(data))
+}
+
+
 module.exports = {
-  getPages
+  getPages,
+  success,
+  error,
+  info
 }
