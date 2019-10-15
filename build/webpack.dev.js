@@ -15,7 +15,7 @@ const devConfig = {
   devServer: {
     contentBase: '../dist',
     open: true,
-    port: 3001,
+    port: 3000,
     hot: true,
     hotOnly: true,
     // 开发默认打开哪个页面
